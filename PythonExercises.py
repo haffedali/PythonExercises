@@ -99,3 +99,44 @@ print(factorialRecursive(8))
 allIntegrals(10)
 
 checkPhrases(["racecar", "president", "Some men interpret nine memos"])
+
+
+# Three is a Crowd
+class Crowd():
+    def __init__(self):
+        self.room = ["Haffed", "Becca", "Jessica", "Joseph"]
+
+    def isRoomCrowded(self):
+        if len(self.room) >= 6:
+            print("There is a heckin mob up in there!!!")
+        elif len(self.room) >= 3 and len(self.room)< 6:
+            print("Sorry, The room is pretty crowded")
+        else:
+            print("We have space, come on in!")
+            print("What's your name hun?")
+            self.room.append(input())
+    
+    def bootABish(self):
+        self.room.pop()
+
+    def giveTheGuestList(self):
+        print(self.room)
+
+    def makeItAMob(self):
+        self.room.append("Tyler")
+        self.room.append("Jacob")
+        self.room.append("Dylan")
+        self.room.append("Alex")
+
+
+
+coffeeHouse = Crowd()
+
+coffeeHouse.bootABish()
+coffeeHouse.bootABish()
+coffeeHouse.isRoomCrowded()
+coffeeHouse.giveTheGuestList()
+coffeeHouse.makeItAMob()
+coffeeHouse.isRoomCrowded()
+coffeeHouse.giveTheGuestList()
+
